@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Sigmar+One&display=swap');
+.blog-title{
+    display: flex;
+    justify-content: center;
+}
+.below-title{
+    display: flex;
+    justify-content: center;
+}
+.Logo{
+     display: flex;
+     justify-content: center;
+
+ }
+ .page-title{
+     display: flex;
+     justify-content: center;
+     position: relative;
+     top:2rem;
+ }
+.label{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-family: 'Sigmar One', cursive;
+ color: White;
+ background-color: seagreen;
+}
+.par1{
+    position: relative;
+    left:12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Oswald', sans-serif; 
+    color: white;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    
+}
+.trash{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    border-radius: 40px;
+}

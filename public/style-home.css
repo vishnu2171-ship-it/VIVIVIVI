@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bangers&family=Luckiest+Guy&family=Merienda&family=Rammetto+One&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Sigmar+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Oswald:wght@200&family=Sigmar+One&family=Staatliches&display=swap');
+.blog-title{
+    display: flex;
+    justify-content: center;
+}
+.below-title{
+    display: flex;
+    justify-content: center;
+}
+.Logo{
+     display: flex;
+     justify-content: center;
+
+ }
+ .page-title{
+     display: flex;
+     justify-content: center;
+     position: relative;
+     top:2rem;
+
+ }
+
+
+.body{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;  
+}
+.container{
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 30px;
+
+}
+
+.container .card{
+    position: relative;
+    max-width: 280px;
+    height: 215px;
+    background-color: #D6EAF8 ;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 20px;
+    
+
+
+}
+.container .card:hover{
+    height: 350px;
+}
+
+.container .card .imgbx{
+    position: relative;
+    width:85%;
+    height: 180px;
+    top: -60px;
+    left: 9%;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    
+}
+
+.container .card .imgbx img{
+    width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+    background-color: cornflowerblue;
+}
+
+.container .card .content
+{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 10px;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity:0;
+    transition: 0.3s ease-in-out;
+ 
+
+}
+
+.container .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin: -40px;
+    transition-delay: 0.3s;
+}
+.all-blogs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.number{
+    font-family:'Luckiest Guy', cursive;
+    font-size: 30px;
+    position: absolute;
+    top:40%;
+    left: 30%;
+    color:white
+}
+.footer{
+    position: relative;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#blogTitle{
+    font-family:'Sigmar One', cursive ;
+    font-size: 25px;
+}
+
+.all-blogs{
+    font-family:'Rammetto One', cursive ;
+    color:#eeeeee
+}
+
+.footer{
+    color: white;
+}
+/* .blog-owner{
+    position: absolute;
+    top:70%;
+    left: 30%;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+
+} */
+.owner{
+    position: absolute;
+    bottom: 0px;
+    left:25%;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    color: #00adb5;
+   
+}
+.container .card:hover .blog-owner{
+    visibility: hidden;
+    transition: 0.2s ease-out;
+   
+}
+#blog-title:hover{
+    color: teal;
+}
+#createdAt{
+    font-family:'Staatliches', cursive ;
+    font-size: 12px;
+    color: #FF7F50;
+}
+#blogSnippet{
+    font-family: 'Courgette', cursive;
+    color: #2F4F4F;
+    font-size: 16px;
+}

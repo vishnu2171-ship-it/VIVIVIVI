@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Merienda&family=Sigmar+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Odibee+Sans&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="/style-add-blogs.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Merienda&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bangers&family=Luckiest+Guy&family=Merienda&family=Sigmar+One&display=swap');
+.nav-extended{
+    background-color: #5F9EA0;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 6px;
+}
+.tab{
+    border-top-left-radius:5px ;
+    border-top-right-radius: 5px;
+    
+}
+.tab:hover{
+    background-color: #008B8B;
+    transition: 0.5s ease-in-out;
+   
+}
+body{
+    background-color: #17202A  ;
+}
+.nav-content{
+    background-color: #21618c ;
+    font-family:'Alfa Slab One', cursive ;
+}
+.nav-wrapper{
+    background-color: #2E4053 ;
+    font-family:'Bangers', cursive;
+}
+
+.brand-logo:hover{
+    color:lightseagreen;
+   
+}
+.add-blogs{
+  padding:5%
+}
+#name,#title,#snippet{
+  color:beige
+}
+
+    </style>
+</head>
+<body>
+    
+  <nav class="nav-extended">
+    <div class="nav-wrapper">  
+        <div class="Logo">  <a href="#" class="brand-logo">Blogs</a></div>
+        <div class="page-title"><p>Create Blog</p></div>
+     
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a class="active" href="/">Home</a></li>
+        <li class="tab"><a class="active" href="/about">About </a></li>
+        <li class="tab"><a class="active" href="/blogs/create">Create a Blog</a></li>
+       
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">JavaScript</a></li>
+  </ul> 
+  
+    
+      <div class="container-blog">
+      <div class="add-blogs">
+          <form action='/blogs' method="POST">
+            <label for="title"><h5>Your Name</h5> </label>
+            <input name="name" placeholder="Enter your name" id="name" type="text" class="validate" required>
+            <label for="title"><h5>Blog's Title</h5> </label>
+              <input name="title" placeholder="Enter The Title" id="title" type="text" class="validate" required>
+              <div>
+              <label><h5>Blog's Snippet</h5></label>
+              <input name="snippet" placeholder="Snippet of your blog" id="snippet" type="text" class="validate">
+            </div>
+              
+              <div class="form-group">
+                <label for="snippet"><h5>Write Blog</h5></label>
+                <textarea name="body" placeholder="Write something....." class="form-control" id="body" rows="9"></textarea required>
+              </div>
+             
+              <div>
+                <button class="btn waves-effect waves-light" type="submit">Submit
+                    <i class="material-icons right">send</i>
+                  </button>
+              </div>
+              
+          </form>
+
+      </div>
+      </div>
+    
+     
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

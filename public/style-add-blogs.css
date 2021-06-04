@@ -1,0 +1,33 @@
+.blog-title{
+    display: flex;
+    justify-content: center;
+}
+.below-title{
+    display: flex;
+    justify-content: center;
+}
+.Logo{
+     display: flex;
+     justify-content: center;
+
+ }
+ .page-title{
+     display: flex;
+     justify-content: center;
+     position: relative;
+     top:2rem;
+     
+ }
+ .add-blogs{
+
+     display: flex;
+     justify-content: center;
+   
+ }
+ #first_name{
+     font-family: 'Cookie', cursive;
+     font-size: 20px;
+ }
+ #body,#snippet,#title{
+     font-family: 'Merienda', cursive;
+ }

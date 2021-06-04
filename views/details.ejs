@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/style-details.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Merienda&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bangers&family=Luckiest+Guy&family=Merienda&family=Sigmar+One&display=swap');
+.nav-extended{
+    background-color: #5F9EA0;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 6px;
+}
+.tab{
+    border-top-left-radius:5px ;
+    border-top-right-radius: 5px;
+    
+}
+.tab:hover{
+    background-color: #008B8B;
+    transition: 0.5s ease-in-out;
+   
+}
+body{
+    background-color: #17202A  ;
+}
+.nav-content{
+    background-color: #21618c ;
+    font-family:'Alfa Slab One', cursive ;
+}
+.nav-wrapper{
+    background-color: #2E4053 ;
+    font-family:'Bangers', cursive;
+}
+
+.brand-logo:hover{
+    color:lightseagreen;
+   
+}
+
+  </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav-extended">
+        <div class="nav-wrapper">  
+            <div class="Logo">  <a href="/blogs" class="brand-logo">Blogs</a></div>
+            <div class="page-title"><p>Blog-Content</p></div>
+         
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons"></i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
+        </div>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a class="active" href="/">Home</a></li>
+            <li class="tab"><a class="active" href="/about">About Us</a></li>
+            <li class="tab"><a class="active" href="/blogs/create">Create a Blog</a></li>
+           
+          </ul>
+        </div>
+      </nav>
+      <div>
+     
+         
+              <div class="label">
+             <label><h2 id="head2"><%=blog.title%></h2></label>
+            </div>
+           
+        
+            <div class="par1">
+           <p id="para1"><%=blog.body%></p>
+          </div>
+    
+
+   
+     <div class="trash">
+       <a class="delete" data-doc="<%=blog._id%>"> <i class=" trr fas fa-trash-alt"></i></a>
+     </div>
+      <!-- <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>  -->
+      
+    <script>
+      const trashcan = document.querySelector('a.delete')
+      trashcan.addEventListener('click',(e)=>{
+        const endpoint = `/blogs/${trashcan.dataset.doc}`
+        fetch(endpoint,{
+          method:'DELETE'
+        }).then((response)=>{
+          response.json().then((data)=>{
+            window.location.href=data.redirect
+          })
+        }).catch(err => console.log(err))
+      })
+    </script>
+</body>
+</html>

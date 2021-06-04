@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Merienda&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bangers&family=Luckiest+Guy&family=Merienda&family=Sigmar+One&display=swap');
+.nav-extended{
+    background-color: #5F9EA0;
+    border-top-right-radius: 60px;
+    border-top-left-radius: 6px;
+}
+.tab{
+    border-top-left-radius:5px ;
+    border-top-right-radius: 5px;
+    
+}
+.tab:hover{
+    background-color: #008B8B;
+    transition: 0.5s ease-in-out;
+   
+}
+body{
+    background-color: #17202A  ;
+}
+.nav-content{
+    background-color: #21618c ;
+    font-family:'Alfa Slab One', cursive ;
+}
+.nav-wrapper{
+    background-color: #2E4053 ;
+    font-family:'Bangers', cursive;
+}
+
+.brand-logo:hover{
+    color:lightseagreen;
+   
+}
